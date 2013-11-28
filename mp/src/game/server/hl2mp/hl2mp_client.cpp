@@ -186,7 +186,7 @@ void GameStartFrame( void )
 
 #ifdef DEBUG
 	extern void Bot_RunAll();
-	Bot_RunAll();
+	//Bot_RunAll();
 #endif
 }
 

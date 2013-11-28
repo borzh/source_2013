@@ -198,21 +198,26 @@ void CHL2MP_Player::GiveDefaultItems( void )
 {
 	EquipSuit();
 
+#if 0
 	CBasePlayer::GiveAmmo( 255,	"Pistol");
 	CBasePlayer::GiveAmmo( 45,	"SMG1");
 	CBasePlayer::GiveAmmo( 1,	"grenade" );
 	CBasePlayer::GiveAmmo( 6,	"Buckshot");
 	CBasePlayer::GiveAmmo( 6,	"357" );
+#endif
 
 	if ( GetPlayerModelType() == PLAYER_SOUNDS_METROPOLICE || GetPlayerModelType() == PLAYER_SOUNDS_COMBINESOLDIER )
 	{
 		GiveNamedItem( "weapon_stunstick" );
+		Weapon_Switch( Weapon_OwnsThisType( "weapon_stunstick" ) );
 	}
 	else if ( GetPlayerModelType() == PLAYER_SOUNDS_CITIZEN )
 	{
 		GiveNamedItem( "weapon_crowbar" );
+		Weapon_Switch( Weapon_OwnsThisType( "weapon_crowbar" ) );
 	}
-	
+
+#if 0
 	GiveNamedItem( "weapon_pistol" );
 	GiveNamedItem( "weapon_smg1" );
 	GiveNamedItem( "weapon_frag" );
@@ -230,6 +235,7 @@ void CHL2MP_Player::GiveDefaultItems( void )
 	{
 		Weapon_Switch( Weapon_OwnsThisType( "weapon_physcannon" ) );
 	}
+#endif
 }
 
 void CHL2MP_Player::PickDefaultSpawnTeam( void )
