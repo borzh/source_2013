@@ -2,7 +2,7 @@
 
 # Visual Studio 
 *.suo
-*.user
+#*.user
 *.sln.docstates
 *.obj
 *.pch
@@ -17,7 +17,7 @@ ipch
 *.sdf
 *.opensdf
 *.idb
-*.vcxproj
+#*.vcxproj
 *.sln
 
 # OSX/Linux build products

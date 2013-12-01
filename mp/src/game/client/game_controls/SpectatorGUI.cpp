@@ -696,7 +696,9 @@ void CSpectatorGUI::Update()
 		g_pVGuiLocalize->ConvertANSIToUnicode( "" ,szTitleLabel,sizeof(szTitleLabel));
 	}
 
+#ifndef BORZH_DEFINE
 	SetLabelText("extrainfo", szEtxraInfo );
+#endif
 	SetLabelText("titlelabel", szTitleLabel );
 }
 
